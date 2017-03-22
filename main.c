@@ -6,7 +6,7 @@
 /*   By: rishchen <rishchen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 23:15:07 by rishchen          #+#    #+#             */
-/*   Updated: 2017/03/22 20:04:04 by rishchen         ###   ########.fr       */
+/*   Updated: 2017/03/22 20:11:15 by rishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int				main(int argc, char **argv)
 	int			fd;
 
 	if (argc != 2)
-		return (write(1, "Uncorrect range of data\n", 24));
+		return (write(1, "Incorrect range of data\n", 24));
 	fd = open(argv[argc - 1], O_RDONLY);
 	if (fd != -1)
 	{
