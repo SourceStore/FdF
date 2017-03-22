@@ -93,7 +93,8 @@ int			check_arr(int fd)
 	{
 		line2 = ft_strsplit(line, ' ');
 		cline = count_range_mas(line2, cline);
-		i++;
+		if (*line != '\0')
+			i++;
 		free(line);
 		flag = count_range_mas(line2, -1);
 		if (incor_char(line2) == 0 || cline < flag || flag == 1)
