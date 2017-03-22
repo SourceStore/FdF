@@ -96,11 +96,9 @@ int			check_arr(int fd)
 		i++;
 		free(line);
 		flag = count_range_mas(line2, -1);
-		if (incor_char(line2) == 0 || cline != flag || flag == 1)
+		if (incor_char(line2) == 0 || cline < flag || flag == 1)
 			return (0);
 		ft_strdel(line2);
 	}
-	if (line)
-		free(line);
 	return (i);
 }
