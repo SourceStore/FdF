@@ -94,10 +94,13 @@ t_cdata		*create_mas(int fd, int size)
 		line2 = ft_strsplit(line, ' ');
 		if (j == 0)
 			j = range_x(line2);
-		(*(ans + i)) = allocate_coor(i, line2);
-		free(line);
-		ft_strdel(line2);
-		i++;
+		if (*line2 != '\0' && **line2 != (char)32)
+		{
+			(*(ans + i)) = allocate_coor(i, line2);
+			free(line);
+			ft_strdel(line2);
+			i++;
+		}
 	}
 	ans->sizex = j;
 	return (ans);

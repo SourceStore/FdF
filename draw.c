@@ -6,7 +6,7 @@
 /*   By: rishchen <rishchen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 20:13:04 by rishchen          #+#    #+#             */
-/*   Updated: 2017/03/21 21:54:55 by rishchen         ###   ########.fr       */
+/*   Updated: 2017/03/22 20:24:39 by rishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,9 @@ void		draw_image(t_data *m_node)
 	while (++i < m_node->sizey)
 	{
 		j = -1;
-		while (++j < m_node->sizex)
+		while (++j <= m_node->sizex - 1)
 		{
-			if (j + 1 < m_node->sizex)
+			if (j + 1 <= m_node->sizex - 1)
 			{
 				yoba_kostil(m_node, i, j);
 				data_for_draw(m_node, i, j);

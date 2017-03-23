@@ -21,10 +21,10 @@ void		axo_proj(t_data *m_node)
 	double	bufz;
 
 	i = -1;
-	while (++i < m_node->sizey)
+	while (++i <= m_node->sizey - 1)
 	{
 		j = -1;
-		while (++j < m_node->sizex)
+		while (++j <= m_node->sizex - 1)
 		{
 			bufx = m_node->data[i].x[j];
 			bufy = m_node->data[i].y[j];

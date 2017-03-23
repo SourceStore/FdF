@@ -6,7 +6,7 @@
 /*   By: rishchen <rishchen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/21 21:19:16 by rishchen          #+#    #+#             */
-/*   Updated: 2017/03/21 21:56:01 by rishchen         ###   ########.fr       */
+/*   Updated: 2017/03/23 16:19:30 by rishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,11 +93,11 @@ int			check_arr(int fd)
 	{
 		line2 = ft_strsplit(line, ' ');
 		cline = count_range_mas(line2, cline);
-		if (*line != '\0')
+		if (*line != '\0' && line2[0] != NULL)
 			i++;
 		free(line);
 		flag = count_range_mas(line2, -1);
-		if (incor_char(line2) == 0 || cline < flag || flag == 1)
+		if (incor_char(line2) == 0 || cline != flag)
 			return (0);
 		ft_strdel(line2);
 	}
